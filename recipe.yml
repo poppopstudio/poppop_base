@@ -91,7 +91,7 @@ config:
         use_admin_theme: true
     system.site:
       simpleConfigUpdate:
-        page.front: /home
+        page.front: /node/1
         name: 'PopPop'
         mail: 'tech@poppop.studio'
     system.theme:

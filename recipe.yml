@@ -28,6 +28,7 @@ install:
   - inline_form_errors
   - linkit
   - localgov_base
+  - masquerade
   - menu_link_content
   - datetime
   - menu_ui
@@ -47,6 +48,7 @@ config:
       - image.style.large
       - image.style.thumbnail
     linkit: '*'
+    masquerade: '*'
     localgov_base: '*'
     node:
       - views.view.content

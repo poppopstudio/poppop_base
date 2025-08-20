@@ -26,6 +26,7 @@ install:
   - gin_toolbar
   - help
   - inline_form_errors
+  - linkit
   - localgov_base
   - menu_link_content
   - datetime
@@ -45,6 +46,7 @@ config:
     image:
       - image.style.large
       - image.style.thumbnail
+    linkit: '*'
     localgov_base: '*'
     node:
       - views.view.content

@@ -28,7 +28,6 @@ default:
       value: false
   path:
     -
-      alias: /home
       langcode: en-gb
   body:
     -

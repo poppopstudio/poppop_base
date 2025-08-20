@@ -4,7 +4,7 @@
     "type": "drupal-recipe",
     "authors": [
         {
-            "name": "Nik LePage",
+            "name": "NikLP",
             "homepage": "https://poppop.studio",
             "role": "Maintainer"
         }
@@ -15,7 +15,6 @@
         "drupal/environment_indicator": "^4.1",
         "drupal/gin": "^4.1",
         "drupal/gin_login": "^2.1",
-        "drupal/gin_toolbar": "^1.0",
         "localgovdrupal/localgov_base": "^2.1"
     }
 }

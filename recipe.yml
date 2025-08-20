@@ -42,6 +42,8 @@ config:
   import:
     dblog:
       - views.view.watchdog
+    file:
+      - views.view.files
     gin: '*'
     gin_login: '*'
     image:

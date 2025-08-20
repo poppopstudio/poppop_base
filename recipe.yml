@@ -1,0 +1,125 @@
+name: 'PopPop base install'
+description: 'Provides a base PopPop site.'
+type: 'Site'
+recipes:
+  - core/recipes/page_content_type
+  - core/recipes/basic_html_format_editor
+  - core/recipes/full_html_format_editor
+  - core/recipes/core_recommended_performance
+  - core/recipes/core_recommended_admin_theme
+  - core/recipes/restricted_html_format
+  - core/recipes/administrator_role
+  - core/recipes/content_editor_role
+install:
+  - admin_toolbar
+  - admin_toolbar_tools
+  - block
+  - image
+  - claro
+  - config
+  - contextual
+  - dblog
+  - environment_indicator
+  - environment_indicator_toolbar
+  - gin
+  - gin_login
+  - gin_toolbar
+  - help
+  - inline_form_errors
+  - localgov_base
+  - menu_link_content
+  - datetime
+  - menu_ui
+  - options
+  - toolbar
+  - field_ui
+  - views
+  - views_ui
+config:
+  strict: true
+  import:
+    dblog:
+      - views.view.watchdog
+    gin: '*'
+    gin_login: '*'
+    image:
+      - image.style.large
+      - image.style.thumbnail
+    localgov_base: '*'
+    node:
+      - views.view.content
+    user:
+      - core.entity_view_mode.user.compact
+      - views.view.user_admin_people
+  actions:
+    core.date_format.short:
+      simpleConfigUpdate:
+        pattern: 'd/m/Y g:ia'
+    core.date_format.medium:
+      simpleConfigUpdate:
+        pattern: 'D d/m/Y g:ia'
+    core.date_format.long:
+      simpleConfigUpdate:
+        pattern: 'l j F Y \a\t g:ia'
+    file.settings:
+      simpleConfigUpdate:
+        filename_sanitization:
+          transliterate: true
+          replace_whitespace: true
+          replace_non_alphanumeric: true
+          deduplicate_separators: true
+          lowercase: true
+          replacement_character: '-'
+    gin.settings:
+      simpleConfigUpdate:
+        preset_accent_color: teal
+        preset_focus_color: gin
+        enable_darkmode: auto
+        classic_toolbar: horizontal
+        secondary_toolbar_frontend: false
+        show_user_theme_settings: true
+        features:
+          node_user_picture: false
+    node.settings:
+      simpleConfigUpdate:
+        use_admin_theme: true
+    system.site:
+      simpleConfigUpdate:
+        page.front: /home
+        name: 'PopPop'
+        mail: 'tech@poppop.studio'
+    system.theme:
+      simpleConfigUpdate:
+        admin: gin
+        default: localgov_base
+    user.role.anonymous:
+      grantPermission: 'access content'
+    user.role.authenticated:
+      grantPermissions:
+        - 'access content'
+        - 'delete own files'
+    user.role.content_editor:
+      grantPermissions:
+        - 'access administration pages'
+        - 'access content overview'
+        - 'access contextual links'
+        - 'access toolbar'
+        - 'create page content'
+        - 'delete own files'
+        - 'delete own page content'
+        - 'delete page revisions'
+        - 'edit own page content'
+        - 'revert all revisions'
+        - 'view all revisions'
+        - 'view own unpublished content'
+        - 'view the administration theme'
+      grantPermissionsForEachNodeType:
+        - 'create %bundle content'
+        - 'delete %bundle revisions'
+        - 'delete own %bundle content'
+        - 'edit own %bundle content'
+    user.settings:
+      simpleConfigUpdate:
+        verify_mail: true
+        register: visitors_admin_approval
+        cancel_method: user_cancel_block

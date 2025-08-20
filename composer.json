@@ -1,0 +1,21 @@
+{
+    "name": "poppopstudio/poppop_base",
+    "description": "A recipe for a new PopPop Drupal 10 project (non-LGD).",
+    "type": "drupal-recipe",
+    "authors": [
+        {
+            "name": "Nik LePage",
+            "homepage": "https://poppop.studio",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "drupal/core": "^10.5",
+        "drupal/admin_toolbar": "^3.6",
+        "drupal/environment_indicator": "^4.1",
+        "drupal/gin": "^4.1",
+        "drupal/gin_login": "^2.1",
+        "drupal/gin_toolbar": "^1.0",
+        "localgovdrupal/localgov_base": "^2.1"
+    }
+}

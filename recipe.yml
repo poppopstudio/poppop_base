@@ -15,7 +15,6 @@ install:
   - admin_toolbar_tools
   - block
   - image
-  - claro
   - config
   - contextual
   - dblog
@@ -24,7 +23,6 @@ install:
   - gin
   - gin_login
   - gin_toolbar
-  - help
   - inline_form_errors
   - linkit
   - localgov_base
@@ -44,7 +42,15 @@ config:
       - views.view.watchdog
     file:
       - views.view.files
-    gin: '*'
+    gin:
+      - gin.settings
+      - block.block.gin_breadcrumbs
+      - block.block.gin_content
+      - block.block.gin_local_actions
+      - block.block.gin_messages
+      - block.block.gin_page_title
+      - block.block.gin_primary_local_tasks
+      - block.block.gin_secondary_local_tasks
     gin_login: '*'
     image:
       - image.style.large

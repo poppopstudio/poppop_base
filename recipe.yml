@@ -2,6 +2,7 @@ name: 'PopPop base install'
 description: 'Provides a base PopPop site.'
 type: 'Site'
 recipes:
+  # Grab the useful core recipes!
   - core/recipes/page_content_type
   - core/recipes/basic_html_format_editor
   - core/recipes/full_html_format_editor
@@ -42,6 +43,7 @@ config:
       - views.view.watchdog
     file:
       - views.view.files
+    # Because otherwise gin imports unwanted help config.
     gin:
       - gin.settings
       - block.block.gin_breadcrumbs

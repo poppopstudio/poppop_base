@@ -91,7 +91,7 @@ config:
         enable_darkmode: auto
         classic_toolbar: horizontal
         secondary_toolbar_frontend: false
-        show_user_theme_settings: true
+        show_user_theme_settings: false
         features:
           node_user_picture: false
     node.settings:

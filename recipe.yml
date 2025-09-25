@@ -4,7 +4,7 @@ type: 'Site'
 recipes:
   # Grab the useful core recipes!
   - core/recipes/page_content_type
-  - core/recipes/basic_html_format_editor
+  # - core/recipes/basic_html_format_editor
   - core/recipes/full_html_format_editor
   - core/recipes/core_recommended_performance
   - core/recipes/core_recommended_admin_theme

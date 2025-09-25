@@ -4,6 +4,7 @@ type: 'Site'
 recipes:
   # Grab the useful core recipes!
   - core/recipes/page_content_type
+  # Added a customised version via config
   # - core/recipes/basic_html_format_editor
   - core/recipes/full_html_format_editor
   - core/recipes/core_recommended_performance
@@ -112,6 +113,7 @@ config:
       grantPermissions:
         - 'access content'
         - 'delete own files'
+        - 'use text format basic_html'
     user.role.content_editor:
       grantPermissions:
         - 'access administration pages'

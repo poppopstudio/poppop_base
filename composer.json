@@ -17,6 +17,13 @@
         "drupal/gin_login": "^2.1",
         "drupal/linkit": "^7.0",
         "drupal/masquerade": "^2.0",
-        "localgovdrupal/localgov_base": "^2.1"
+        "drupal/localgov_base": "^2.3"
+    },
+    "extra": {
+        "patches": {
+            "drupal/localgov_base": {
+                "Issue 3571231: Fix tabledrag handle visibility (box-sizing unset)": "https://git.drupalcode.org/project/localgov_base/-/merge_requests/12.patch"
+            }
+        }
     }
 }
